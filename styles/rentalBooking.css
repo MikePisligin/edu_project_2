@@ -1,0 +1,51 @@
+.booking {
+    width: 60%;
+    margin: 40px auto 50px auto;
+}
+
+.booking h3 {
+    font-size: 22pt;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 40px;
+}
+.booking__content {
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.booking__content p {
+    margin-bottom: 5px;
+}
+
+.booking__content ul {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.rental {
+    margin: 30px auto;
+}
+
+.rental h3 {
+    font-size: 22pt;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 40px;
+}
+.rental__content {
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.rental__content p {
+    margin-bottom: 5px;
+}
+
+.rental__content ul {
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}

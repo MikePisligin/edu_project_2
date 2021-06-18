@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Аренда посуточно</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/aboutApartments.css" />
+    <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.css">
+    <!--<link rel="stylesheet" type="text/css" href="styles/fontawesome-free-5.15.3-web/css/all.css" />
+    <script src="https://use.fontawesome.com/d6f71513a1.js"></script>-->
+        <style type="text/css">
+        
+            .ui-slider-horizontal {
+                background: #793dc1;
+                width: 35%;
+                height: 10px;
+            }
+            
+            .ui-slider-range {
+                background: #4f1e66;
+            }
+
+            .ui-slider .ui-slider-handle {
+                height: 20px;
+                width: 10px;
+            }
+            .ui-dialog-title {
+                font-style: italic;
+            }
+            .ui-dialog-content {
+                font-size: 11pt;
+                font-style: italic;
+                padding: 10px 15px;
+            }
+            .ui-dialog {
+                background: rgba(43, 172, 211, 0.65);
+            }
+            .ui-dialog .ui-dialog-buttonpane {
+                padding: 0;
+                background-color: rgba(43, 172, 211, 0.85);
+            }
+        </style>
+</head>
+
+<body class="container">
+
+    <header class="header">
+        <div class="header__logo">
+            <a class="logo__link" href="../start.html">
+                <img class="logo__image" class="product__image" src="../images/icons/logo.JPG" alt="">
+            </a>
+        </div>
+        <div class="header__link">
+            <a class="header__link_a header__form-link_width" href="../html/aboutApartments.html">О квартирах</a>
+            <a class="header__link_a header__form-link_width" href="rentalBooking.html">Условия аренды и бронирования</a>
+        </div>
+        <div class="header__numbers">
+            <a class="header__numbers_a" href="#">+7 (916) 385-00-77</a>
+            <a class="header__numbers_a" href="#">+7 (985) 550-05-94</a>
+        </div>
+        <div class="header__button">
+            <a class="header__button_a" href="#">Написать нам</a>
+        </div>
+    </header>
+
+    <div class="aboutApartmentsContent">
+        <h3>В наших квартирах всегда есть:</h3>
+        <div class="aboutApartmentsContent__textBlocks">
+            <div class="aboutApartmentsContent__textBlock">
+                <p>1</p>
+                <p>Квартира тщательно убрана и продезинфицирована.</p>
+            </div>
+            <div class="aboutApartmentsContent__textBlock">
+                <p>2</p>
+                <p>Безлимитный Интернет. Современный телевизор.</p>
+            </div>
+            <div class="aboutApartmentsContent__textBlock aboutApartmentsContent__textBlock_last">
+                <p>3</p>
+                <p>Глаженое постельное бельё и полотенца.</p>
+            </div>
+            <div class="aboutApartmentsContent__textBlock">
+                <p>4</p>
+                <p>Холодильник, микроволновая печь, вся необходимая посуда и столовые приборы.</p>
+            </div>
+            <div class="aboutApartmentsContent__textBlock">
+                <p>5</p>
+                <p>Стиральная машина, шампунь, мыло и фен для волос.</p>
+            </div>
+            <div class="aboutApartmentsContent__textBlock aboutApartmentsContent__textBlock_last">
+                <p>6</p>
+                <p>Утюг, гладильная доска и вешалка для одежды.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__block1">
+            <a class="footer_textStyle" href="#">Smart rent</a>
+            <a class="footer_textStyle footer_textStyle_color" href="https://tlgg.ru/@msido"><i class="fab fa-telegram"></i></a>
+            <p class="footer_textStyle">© 2020 Все права защищены</p>
+        </div>
+        <div class="block2">
+            <p class="footer_textStyle">Телефон: +7 (916) 385-00-77</p>
+            <p class="footer_textStyle">Режим работы: круглосуточно без выходных</p>
+            <p class="footer_textStyle">Почта: <span class="footer_textStyle_bold">info@smartrent.pro</span></p>
+            <p class="footer_textStyle">Москва, 2-я Мякининская 19-а</p>
+        </div>
+        <div class="block3">
+            <a class="footer_textStyle footer_textStyle_link" href="../html/aboutApartments.html">
+                <p>О квартирах</p>
+            </a>
+            <p><a class="footer_textStyle footer_textStyle_link" href="#about__about">О нас</a></p>
+            <p><a class="footer_textStyle footer_textStyle_link" href="rentalBooking.html">Условия аренды и бронирования</a></p>
+            <p><a class="footer_textStyle footer_textStyle_link" href="#">Хочу сдать свою квартиру в управление</a></p>
+            <p><a class="footer_textStyle footer_textStyle_link" href="#">Партнёрская программа для риелторов</a></p>
+        </div>
+        <div class="block4">
+            <p><a class="footer_textStyle footer_textStyle_link" href="#">Политика обработки персональных данных</a></p>
+        </div>
+    </footer>
+    
+    <div class="subscribe">
+        <div class="subscribeClose">
+            <a href="#">&#10006;</a>
+        </div>
+        <div class="subscribeForm">
+            <div class="subscribeForm__block">
+                <p>Ваше имя:</p>
+                <input type="text">
+            </div>
+            <div class="subscribeForm__block">
+                <p>Телефон для связи:</p>
+                <input type="text">
+            </div>
+            <div class="subscribeForm__block">
+                <p>Электронная почта (e-mail):</p>
+                <input type="text">
+            </div>
+            <div class="subscribeForm__block">
+                <p>Текст заявки:</p>
+                <textarea cols="35" rows="12"></textarea>
+            </div>
+        </div>
+        <div class="subscribeSend">
+            <a href="#">Отправить обращение</a>
+        </div>
+    </div>
+
+    <div class="sendFeedback">Ваше обращение зарегистрировано!</div>
+
+    <script src="../jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="../jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="../js-scripts/handlerFeedback.js"></script>
+</body>
+
+</html>

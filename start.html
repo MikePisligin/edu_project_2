@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Аренда посуточно</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <!--<link rel="stylesheet" type="text/css" href="styles/fontawesome-free-5.15.3-web/css/all.css" />
+    <script src="https://use.fontawesome.com/d6f71513a1.js"></script>-->
+        <style type="text/css">
+        
+            .ui-slider-horizontal {
+                background: #793dc1;
+                width: 35%;
+                height: 10px;
+            }
+            
+            .ui-slider-range {
+                background: #4f1e66;
+            }
+
+            .ui-slider .ui-slider-handle {
+                height: 20px;
+                width: 10px;
+            }
+            .ui-dialog-title {
+                font-style: italic;
+            }
+            .ui-dialog-content {
+                font-size: 11pt;
+                font-style: italic;
+                padding: 10px 15px;
+            }
+            .ui-dialog {
+                background: rgba(43, 172, 211, 0.65);
+            }
+            .ui-dialog .ui-dialog-buttonpane {
+                padding: 0;
+                background-color: rgba(43, 172, 211, 0.85);
+            }
+        </style>
+</head>
+
+<body class="container">
+
+    <header class="header">
+        <div class="header__logo">
+            <a class="logo__link" href="start.html">
+                <img class="logo__image" class="product__image" src="images/icons/logo.JPG" alt="">
+            </a>
+        </div>
+        <div class="header__link">
+            <a class="header__link_a header__form-link_width" href="/html/aboutApartments.html">О квартирах</a>
+            <a class="header__link_a header__form-link_font-size" href="#about__about">О нас</a>
+            <a class="header__link_a header__form-link_width" href="/html/rentalBooking.html">Условия аренды и бронирования</a>
+        </div>
+        <div class="header__numbers">
+            <a class="header__numbers_a" href="#">+7 (916) 385-00-77</a>
+            <a class="header__numbers_a" href="#">+7 (985) 550-05-94</a>
+        </div>
+        <div class="header__button">
+            <a class="header__button_a" href="#">Написать нам</a>
+        </div>
+    </header>
+
+    <div class="banner banner__decor">
+        <div class="banner__left">
+            <p>Аренда квартир посуточно в Москве и Симферополе</p>
+        </div>
+        <div class="banner__right">
+            <p>Круглосуточно</p>
+            <p>без выходных</p>
+        </div>
+    </div>
+
+    <div class="search search__decor">
+
+        <div class="search__line">
+
+            <div class="search__dateStart search__line_display">
+                <p class="search__line_textStyle">Заезд</p>
+                <input class="search__date_width" type="text">
+            </div>
+    
+            <div class="search__dateEnd search__line_display">
+                <p class="search__line_textStyle">Выезд</p>
+                <input class="search__date_width" type="text">
+            </div>
+    
+            <div class="search__city search__line_display">
+                <p class="search__line_textStyle">Город</p>
+                <select>
+                    <option></option>
+                    <option>г.Москва</option>
+                    <option>г.Симферополь</option>
+                </select>
+            </div>
+    
+            <div class="search__qountGuest search__line_display">
+                <p class="search__line_textStyle">Гостей</p>
+                <select>
+                    <option></option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>8</option>
+                </select>
+            </div>
+
+            <div class="search__floor search__line_display">
+                <p class="search__line_textStyle">Этаж</p>
+                <select>
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="search__line search__line_align">
+
+            <p class="search__line_styleP">Укажите цену:</p>
+            <div class="search__slider">
+                <div class="search__slider__price"></div>
+                <div class="search__slider__price__range">
+                    <input class="search__slider__price__range__min" type="text" readonly>
+                    <input class="search__slider__price__range__max" type="text" readonly>
+                </div>
+            </div>            
+
+        </div>
+
+        <div class="search__line search__line_margin">
+
+            <div class="search__animals">
+                <input type="checkbox">
+                <span class="search__animals_textStyle">Можно с животными?</span>
+            </div>
+            <div class="search__button">
+                <input type="button" value="Поиск">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="content">
+        <div class="object simfKirova28">
+            <div class="object__info">
+                <div class="object__info__photo">
+                    <a href="#"><img src="" alt=""></a>
+                </div>
+                <div class="object__info__parameter">
+                    <div class="object__info__parameter_size object__info__parameter_margin">
+                        <p class="city"></p>
+                        <p class="address"></p>
+                    </div>
+                    <p class="object__info__parameter_size">Комнат: <span class="room"></span></p>
+                    <p class="object__info__parameter_size">Спальных мест: <span class="sleepPlace"></span></p>
+                    <p class="object__info__parameter_size object__info__parameter_margin">Этаж: <span class="stage"></span></p>
+                    <span>
+                        <img src="images/icons/RoomFacilities/washMachine.JPG" alt="">
+                        <img src="images/icons/RoomFacilities/WiFi.JPG" alt="">
+                        <img src="images/icons/RoomFacilities/TVset.JPG" alt="">
+                        <img src="images/icons/RoomFacilities/childrens.JPG" alt="">
+                        <img src="images/icons/RoomFacilities/fridge.JPG" alt="">
+                        <img src="images/icons/RoomFacilities/kitchenStove.JPG" alt="">
+                        <img src="images/icons/RoomFacilities/microwave.JPG" alt="">
+                        <img src="images/icons/RoomFacilities/iron.JPG" alt="">
+                        <img src="images/icons/RoomFacilities/waterHeater.JPG" alt="">
+                        <img src="images/icons/RoomFacilities/cableTV.JPG" alt="">
+                        <img src="images/icons/RoomFacilities/animals.JPG" alt="">
+                        <img src="images/icons/RoomFacilities/romantic.JPG" alt="">
+                    </span>
+                </div>
+                <div class="object__info__price">
+                    <h3></h3>
+                    <p>руб. в сутки</p>
+                </div>
+            </div>
+            <div class="object__description">
+                <div class="object__slideBlock__roomFacilities">
+                    <div class="object__slideBlock__roomFacilities_1">
+                        <p>
+                            <img src="images/icons/RoomFacilities/washMachine.JPG" alt="">
+                            <span> - стиральная машина;</span>
+                        </p>
+                        <p>
+                            <img src="images/icons/RoomFacilities/WiFi.JPG" alt="">
+                            <span> - беспроводной интернет Wi-Fi;</span>
+                        </p>
+                        <p>
+                            <img src="images/icons/RoomFacilities/TVset.JPG" alt="">
+                            <span> - телевизор;</span>
+                        </p>
+                        <p>
+                            <img src="images/icons/RoomFacilities/childrens.JPG" alt="">
+                            <span> - можно с детьми;</span>
+                        </p>
+                    </div>
+                    <div class="object__slideBlock__roomFacilities_2">
+                        <p>
+                            <img src="images/icons/RoomFacilities/fridge.JPG" alt="">
+                            <span> - холодильник;</span>
+                        </p>
+                        <p>
+                            <img src="images/icons/RoomFacilities/kitchenStove.JPG" alt="">
+                            <span> - кухонная плита;</span>
+                        </p>
+                        <p>
+                            <img src="images/icons/RoomFacilities/microwave.JPG" alt="">
+                            <span> - СВЧ печь;</span>
+                        </p>
+                        <p>
+                            <img src="images/icons/RoomFacilities/iron.JPG" alt="">
+                            <span> - утюг с гладильной доской;</span>
+                        </p>
+                    </div>
+                    <div class="object__slideBlock__roomFacilities_3">
+                        <p>
+                            <img src="images/icons/RoomFacilities/waterHeater.JPG" alt="">
+                            <span> - водонагреватель;</span>
+                        </p>
+                        <p>
+                            <img src="images/icons/RoomFacilities/cableTV.JPG" alt="">
+                            <span> - кабельное ТВ;</span>
+                        </p>
+                        <p>
+                            <img src="images/icons/RoomFacilities/animals.JPG" alt="">
+                            <span> - можно с животными;</span>
+                        </p>
+                        <p>
+                            <img src="images/icons/RoomFacilities/romantic.JPG" alt="">
+                            <span> - для романтических встреч;</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="object__slideBlock__description">
+                    <p class="description">Своя 1-комн. квартира в самом центре у площади Ленина, кабельное ТВ, интернет Wi-Fi, евроремонт, кондиционер, натяжной французский потолок, диван, шкаф, вся кухонная мебель и техника, газовая колонка и плита, вода круглосуточно, санузел
+                        с гидромассажной душевой кабиной с подсветкой, музыкой и вентиляцией, стиральная машина автомат. Рядом площадь Ленина, храмы, церкви, монастыри, театры, цирк, рестораны, кафе, банки, аптеки, супермаркет Сельпо, клубы, парк, остановки
+                        общественного транспорта... </p>
+                    <p class="documents">Документы командировочным. Есть ещё квартиры</p>
+                    <p>Тариф:</p>
+                    <p>- посуточно. Скидки до 30% = количеству предоплаченных суток проживания при заселении;</p>
+                    <p>- почасово минимум на 3часа</p>
+                </div>
+            </div>
+            <div class="object__control">
+                <a class="object__control__moreDetailed simfKirova28" href="#">Подробнее</a>
+                <a class="booking" href="#">Забронировать</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="feedback">
+        <h3>ЕСТЬ ВОПРОСЫ? МЫ ГОТОВЫ НА НИХ ОТВЕТИТЬ</h3>
+        <a href="#">НАПИСАТЬ НАМ</a>
+    </div>
+
+    <div class="about">
+        <a name="about__about"></a>
+        <h3>О нас</h3>
+        <div class="about__content">
+            <div class="about__contentLeft">
+                <p>Мы сдаем квартиры в краткосрочную аренду.</p>
+                <p>Мы основали бизнес в 2012 году. Более 60% наших клиентов это постоянные гости. Мы знаем как сделать так, чтобы вы чувствовали себя комфортно в наших квартирах. Мы готовы предложить: 35 квартир в Москве и 10 квартир в Крыму.</p>
+                <img class="about__contentLeft_img1" src="images/icons/blueCircle.JPG" alt="">
+                <img class="about__contentLeft_img2" src="images/icons/blueCircle.JPG" alt="">
+            </div>
+            <div class="about__contentRight">
+                <img src="images/icons/about.JPG" alt="">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__block1">
+            <a class="footer_textStyle" href="#">Smart rent</a>
+            <a class="footer_textStyle footer_textStyle_color" href="https://tlgg.ru/@msido"><i class="fab fa-telegram"></i></a>
+            <p class="footer_textStyle">© 2020 Все права защищены</p>
+        </div>
+        <div class="block2">
+            <p class="footer_textStyle">Телефон: +7 (916) 385-00-77</p>
+            <p class="footer_textStyle">Режим работы: круглосуточно без выходных</p>
+            <p class="footer_textStyle">Почта: <span class="footer_textStyle_bold">info@smartrent.pro</span></p>
+            <p class="footer_textStyle">Москва, 2-я Мякининская 19-а</p>
+        </div>
+        <div class="block3">
+            <a class="footer_textStyle footer_textStyle_link" href="/html/aboutApartments.html">
+                <p>О квартирах</p>
+            </a>
+            <p><a class="footer_textStyle footer_textStyle_link" href="#about__about">О нас</a></p>
+            <p><a class="footer_textStyle footer_textStyle_link" href="html/rentalBooking.html">Условия аренды и бронирования</a></p>
+            <p><a class="footer_textStyle footer_textStyle_link" href="#">Хочу сдать свою квартиру в управление</a></p>
+            <p><a class="footer_textStyle footer_textStyle_link" href="#">Партнёрская программа для риелторов</a></p>
+        </div>
+        <div class="block4">
+            <p><a class="footer_textStyle footer_textStyle_link" href="#">Политика обработки персональных данных</a></p>
+        </div>
+    </footer>
+
+    <div class="photoObject">
+
+        <div class="photoObject__link">
+            <a class="Close" href="#">&#10006;</a>
+        </div>
+        <div class="photoObject__photo">
+            <p><a class="Prev" href="#">&lsaquo;</a></p>
+            <img src="images/objects/bigPicture/Simf_Kirova_28/1.JPG" alt="">
+            <p><a class="Next" href="#">&rsaquo;</a></p>
+        </div>
+
+    </div>
+
+    <div class="subscribe">
+        <div class="subscribeClose">
+            <a href="#">&#10006;</a>
+        </div>
+        <div class="subscribeForm">
+            <div class="subscribeForm__block">
+                <p>Ваше имя:</p>
+                <input type="text">
+            </div>
+            <div class="subscribeForm__block">
+                <p>Телефон для связи:</p>
+                <input type="text">
+            </div>
+            <div class="subscribeForm__block">
+                <p>Электронная почта (e-mail):</p>
+                <input type="text">
+            </div>
+            <div class="subscribeForm__block">
+                <p>Текст заявки:</p>
+                <textarea cols="35" rows="12"></textarea>
+            </div>
+        </div>
+        <div class="subscribeSend">
+            <a href="#">Отправить обращение</a>
+        </div>
+    </div>
+    <div class="sendFeedback">Ваше обращение зарегистрировано!</div>
+
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $('.search__dateStart input').datepicker();
+        $('.search__dateEnd input').datepicker();
+        $('.search__slider__price').slider({
+            range: true,
+            min: 1200,
+            max: 3500,
+            step: 10,
+            values: [1400, 3200]
+        }).on("slide", function(event, ui) {
+
+            let leftPrice = document.querySelector('.search__slider__price__range__min');
+            let rightPrice = document.querySelector('.search__slider__price__range__max');
+
+            leftPrice.value = $('.search__slider__price').slider("values", 0);
+            rightPrice.value = $('.search__slider__price').slider("values", 1);
+
+        });
+
+        let leftPrice = document.querySelector('.search__slider__price__range__min');
+        let rightPrice = document.querySelector('.search__slider__price__range__max');
+
+        leftPrice.value = $('.search__slider__price').slider("values", 0);
+        rightPrice.value = $('.search__slider__price').slider("values", 1);
+
+        var buttonFeedbackBottom = document.querySelector('.feedback a');
+        buttonFeedbackBottom.addEventListener('click', function(event) {
+
+            event.preventDefault();
+            handlerFeedback();
+        }, false);
+
+    </script>
+
+    <script src="js-scripts/loadObjects.js"></script>
+    <script src="js-scripts/searchObjects.js"></script>
+    <script defer src="js-scripts/handlerPhotoObject.js"></script>
+    <script src="../js-scripts/handlerFeedback.js"></script>
+</body>
+
+</html>

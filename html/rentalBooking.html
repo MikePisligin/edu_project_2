@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Аренда посуточно</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/rentalBooking.css"/>
+    <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.css">
+    <!--<link rel="stylesheet" type="text/css" href="styles/fontawesome-free-5.15.3-web/css/all.css" />
+    <script src="https://use.fontawesome.com/d6f71513a1.js"></script>-->
+        <style type="text/css">
+        
+            .ui-slider-horizontal {
+                background: #793dc1;
+                width: 35%;
+                height: 10px;
+            }
+            
+            .ui-slider-range {
+                background: #4f1e66;
+            }
+
+            .ui-slider .ui-slider-handle {
+                height: 20px;
+                width: 10px;
+            }
+            .ui-dialog-title {
+                font-style: italic;
+            }
+            .ui-dialog-content {
+                font-size: 11pt;
+                font-style: italic;
+                padding: 10px 15px;
+            }
+            .ui-dialog {
+                background: rgba(43, 172, 211, 0.65);
+            }
+            .ui-dialog .ui-dialog-buttonpane {
+                padding: 0;
+                background-color: rgba(43, 172, 211, 0.85);
+            }
+        </style>
+</head>
+
+<body class="container">
+
+    <header class="header">
+        <div class="header__logo">
+            <a class="logo__link" href="../start.html">
+                <img class="logo__image" class="product__image" src="../images/icons/logo.JPG" alt="">
+            </a>
+        </div>
+        <div class="header__link">
+            <a class="header__link_a header__form-link_width" href="../html/aboutApartments.html">О квартирах</a>
+            <a class="header__link_a header__form-link_font-size" href="#about__about">О нас</a>
+            <a class="header__link_a header__form-link_width" href="../html/rentalBooking.html">Условия аренды и бронирования</a>
+        </div>
+        <div class="header__numbers">
+            <a class="header__numbers_a" href="#">+7 (916) 385-00-77</a>
+            <a class="header__numbers_a" href="#">+7 (985) 550-05-94</a>
+        </div>
+        <div class="header__button">
+            <a class="header__button_a" href="#">Написать нам</a>
+        </div>
+    </header>
+
+    <div class="booking">
+        <h3>Условия бронирования:</h3>
+        <div class="booking__content">
+            <p>Бронируем по предоплате в размере залога. При заселении оплачивается аренда за весь период проживания, при выезде возвращается залог при условии сдачи квартиры в том состоянии, в котором получили при заселении.</p>
+            <p>При отказе от бронирования предоплата возвращается:</p>
+            <ul>
+                <li>более чем за 14 суток - 100%;</li>
+                <li>от 14 суток до 7 суток - 50%;</li>
+                <li>менее чем за 7 суток - 0%.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="feedback">
+        <h3>ЕСТЬ ВОПРОСЫ? МЫ ГОТОВЫ НА НИХ ОТВЕТИТЬ</h3>
+        <a href="#">НАПИСАТЬ НАМ</a>
+    </div>
+
+    <div class="rental">
+        <h3>Условия аренды:</h3>
+        <div class="rental__content">
+            <p>Круглосуточное заселение.</p>
+            <p>Заезда с 14:00, выезд до 12:00.</p>
+            <p>Ранний заезд/поздний выезд - 200/400 руб/час.</p>
+            <br>
+            <p>Возможно размещение групп в соседних домах. Скидки при длительном проживании 30 %. Проживание с животными - +500 руб/сутки.</p>
+            <p>Парковка на территории 250 руб/сутки по предварительному заказу. Трансфер по предварительному заказу:</p>
+            <ul>
+                <li>от станций метро Мякинино или Строгина - 99 рублей;</li>
+                <li>от аэропорта Шереметьево - 890 рублей;</li>
+                <li>от аэропорта Внуково - 1190 рублей;</li>
+                <li>от аэропорта Домодедово - 1490 рублей.</li>
+            </ul>
+            <p>Все цены на сайте указаны за двоих, дополнительные гости - +250 рублей/сутки с человека. На мероприятии цена договорная.</p>
+            <br>
+            <p>Ключи передаются в квартире при заселении, при наличии паспорта и залога, который возвращаем при передаче квартиры в том состоянии, в котором Вы её получили при заселении. Штраф за утрату ключей - 1000 рублей.</p>
+            <br>
+            <p>Курить в квартире ЗАПРЕЩЕНО, можно только на балконе или в специально отведённом месте у входа в дом. Штраф - 2000 рублей.</p>
+            <p>Шуметь можно до 23:00. Штраф - 5000 рублей.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__block1">
+            <a class="footer_textStyle" href="#">Smart rent</a>
+            <a class="footer_textStyle footer_textStyle_color" href="https://tlgg.ru/@msido"><i class="fab fa-telegram"></i></a>
+            <p class="footer_textStyle">© 2020 Все права защищены</p>
+        </div>
+        <div class="block2">
+            <p class="footer_textStyle">Телефон: +7 (916) 385-00-77</p>
+            <p class="footer_textStyle">Режим работы: круглосуточно без выходных</p>
+            <p class="footer_textStyle">Почта: <span class="footer_textStyle_bold">info@smartrent.pro</span></p>
+            <p class="footer_textStyle">Москва, 2-я Мякининская 19-а</p>
+        </div>
+        <div class="block3">
+            <a class="footer_textStyle footer_textStyle_link" href="../html/aboutApartments.html">
+                <p>О квартирах</p>
+            </a>
+            <p><a class="footer_textStyle footer_textStyle_link" href="#about__about">О нас</a></p>
+            <p><a class="footer_textStyle footer_textStyle_link" href="../html/rentalBooking.html">Условия аренды и бронирования</a></p>
+            <p><a class="footer_textStyle footer_textStyle_link" href="#">Хочу сдать свою квартиру в управление</a></p>
+            <p><a class="footer_textStyle footer_textStyle_link" href="#">Партнёрская программа для риелторов</a></p>
+        </div>
+        <div class="block4">
+            <p><a class="footer_textStyle footer_textStyle_link" href="#">Политика обработки персональных данных</a></p>
+        </div>
+    </footer>
+    
+    <div class="subscribe">
+        <div class="subscribeClose">
+            <a href="#">&#10006;</a>
+        </div>
+        <div class="subscribeForm">
+            <div class="subscribeForm__block">
+                <p>Ваше имя:</p>
+                <input type="text">
+            </div>
+            <div class="subscribeForm__block">
+                <p>Телефон для связи:</p>
+                <input type="text">
+            </div>
+            <div class="subscribeForm__block">
+                <p>Электронная почта (e-mail):</p>
+                <input type="text">
+            </div>
+            <div class="subscribeForm__block">
+                <p>Текст заявки:</p>
+                <textarea cols="35" rows="12"></textarea>
+            </div>
+        </div>
+        <div class="subscribeSend">
+            <a href="#">Отправить обращение</a>
+        </div>
+    </div>
+
+    <div class="sendFeedback">Ваше обращение зарегистрировано!</div>
+
+    <script>
+
+        var buttonFeedbackBottom = document.querySelector('.feedback a');
+        buttonFeedbackBottom.addEventListener('click', function(event) {
+
+            event.preventDefault();
+            handlerFeedback();
+        }, false);
+
+    </script>
+
+    <script src="../jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="../jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="../js-scripts/handlerFeedback.js"></script>
+</body>
+
+</html>
